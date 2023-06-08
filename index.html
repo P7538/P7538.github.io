@@ -1,9 +1,17 @@
-!DOCTYPE html>
 <html>
 <body>
 
 <h1>hello World</h1>
-<p>test</p>
-
+<button onclick="myFunction()">Click me</button>
+<script>
+    function myFunction() {
+      const socket= new WebSocket('ws://192.168.189.20:8765')
+      console.log('hih')
+        socket.addEventListener("open", (event) => {
+            console.log('foo')
+        socket.send("Hello Server!");
+});
+    }
+    </script>
 </body>
 </html>
